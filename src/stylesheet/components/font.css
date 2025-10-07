@@ -1,0 +1,96 @@
+.font_splash{
+    font-family: "Federo", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.cormorant_light {
+  font-family: "Cormorant SC", serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.cormorant_regular {
+  font-family: "Cormorant SC", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.cormorant_medium {
+  font-family: "Cormorant SC", serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.cormorant_semibold {
+  font-family: "Cormorant SC", serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.cormorant_bold {
+  font-family: "Cormorant SC", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+.roboto{
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+}
+
+.montserrat {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+}
+
+.be-vietnam-pro{
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-style: normal;
+}
+
+.carlito {
+  font-family: "Carlito", sans-serif;
+  font-style: normal;
+}
+
+.times-new-roman {
+  font-family: "Tinos", serif;
+  font-style: normal;
+}
+
+.gentium {
+  font-family: "Gentium Plus", serif;
+  font-style: normal;
+}
+
+.noto-sans {
+  font-family: "Noto Sans", sans-serif;
+  font-style: normal;
+}
+
+.zen-kaku-gothic {
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-style: normal;
+}
+
+.noto-sans-jp{
+  font-family: "Noto Sans JP", sans-serif;
+  font-style: normal;
+}
+
+.noto-sans-kr{
+  font-family: "Noto Sans KR", sans-serif;
+  font-style: normal;
+}
+
+.noto-serif-kr{
+  font-family: "Noto Serif KR", serif;
+  font-style: normal;
+}
+
+.imperial {
+  font-family: "Imperial Script", cursive;
+  font-style: normal;
+}
