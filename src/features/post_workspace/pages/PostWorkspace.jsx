@@ -46,7 +46,7 @@ function PostWorkspace(){
     const [isUpdate, setIsUpdate] = useState(false);
 
     const [cvType, setCvType] = useState(null);
-    const [font, setFont] = useState("");
+    const [font, setFont] = useState("_");
     const [userShared, setUserShared] = useState([]);
     const [userSearch, setUserSearch] = useState([]);
     const [share, setShare] = useState(1);
@@ -465,7 +465,7 @@ function PostWorkspace(){
                 stat02 : waterMark ? 1 : 0,
                 type: cvType,
                 lang : lang,
-                typ01 : font
+                typ01 : font ? font : "_"
             },
             function(d){
                 if(d.status === 2000){
@@ -507,7 +507,7 @@ function PostWorkspace(){
                 stat01 : share*1,
                 type: cvType,
                 lang : lang,
-                typ01 : font
+                typ01 : font ? font : "_"
             },
             function(d){
                 if(d.status === 2000){
@@ -844,7 +844,7 @@ function PostWorkspace(){
                                             InputclassName={"py-3 py-3 border-2 border-[#00000047] focus:border-[black] w-full"}
                                             options={[
                                                 {
-                                                    id: "",
+                                                    id: "_",
                                                     name: "Chọn font"
                                                 },
                                                 {

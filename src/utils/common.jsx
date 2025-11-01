@@ -300,6 +300,7 @@ import mapping from "./mapping";
     URL_BE_AI          = "AI";
 
     //service
+    SV_CHECK_VERIFY    = "SvCheckVerify";
     SV_MOD             = "SvMod";
     SV_COUNT           = "SvCount";
     SV_NEW             = "SvNew";

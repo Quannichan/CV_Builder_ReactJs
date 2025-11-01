@@ -14,7 +14,7 @@ class Mapping{
             10: "noto-sans-kr",
             11: "noto-serif-kr"
         }
-        return font[i] || "";
+        return font[i] || "_";
     }
 
 }

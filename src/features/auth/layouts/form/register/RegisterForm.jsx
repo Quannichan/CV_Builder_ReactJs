@@ -101,19 +101,19 @@ function RegisterForm() {
                 if(d.status === 2000){
                     console.log(d);
                     common.Save_uD(d);
-                    handleNoti("Đăng ký tài khoản thành công!", 1);
-                    nav("/account");
+                    handleNoti("Vui lòng kiểm tra email của bạn đã đăng ký để kích hoạt tài khoản!", 1);
+                    nav("/auth/login");
                 }else if(d.status === 2001 && d.msg){
                     handleNoti(d.msg, 2);
                 }else if(d.status === 2002){
                     handleNoti("Đã xảy ra lỗi, vui lòng thử lại sau!", 2);
                 }else{
-                    handleNoti("Đã xảy ra lỗi, vui lòng thử lại sau!", 2);
+                    handleNoti("Đã xảy ra lỗi", 2);
                 }
             },
             function(e){
                 console.log(e);
-                handleNoti("Đã xảy ra lỗi, vui lòng thử lại sau!", 2);
+                handleNoti("Đã xảy ra lỗi!", 2);
             }
         )
     }
