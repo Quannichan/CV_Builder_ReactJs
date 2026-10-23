@@ -13,6 +13,7 @@ import PostWorkspaceLayout from "../../post_workspace/layouts/PostWorkspaceLayou
 import common from "../../../utils/common";
 import { useEffect } from "react";
 import PostSampleWorkspaceLayout from "../../postsample_workspace/layouts/PostSampleWorkspaceLayout";
+import VerifyLayouts from "../../verify/layouts/VerifyLayouts";
 
 function Main(){
 
@@ -44,6 +45,7 @@ function Main(){
             <Route path="/price" element={<PriceLayout/>}/>
             <Route path="/support" element={<SupportLayout/>}/>
             <Route path="/payment" element={<PaymentLayouts/>}/>
+            <Route path="/verify/account" element={<VerifyLayouts/>}/>
             <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
         {/* Layout footer */}

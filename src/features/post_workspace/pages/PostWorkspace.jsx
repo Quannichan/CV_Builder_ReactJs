@@ -77,7 +77,7 @@ function PostWorkspace(){
             // information
             birthdate:{
                 show: true,
-                value: "",
+                value: null,
             },
             address:{
                 show: true,

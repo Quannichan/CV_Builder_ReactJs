@@ -65,7 +65,7 @@ export default function Classicgrayslide({ isWaterMark, post, change, isPreview 
             <InputIconR
               color={"black"}
               icon={LiaBirthdayCakeSolid}
-              text={common.DateDisplayCustom(post.birthdate ? post.birthdate.value || "" : "", "DD/MM/YYYY")}
+              text={post.birthdate ? post.birthdate.value ? common.DateDisplayCustom(post.birthdate.value, "DD/MM/YYYY") : null : null}
               show={post.birthdate ? post.birthdate.show : false}
               name={"birthdate"}
               change={change}
@@ -101,7 +101,7 @@ export default function Classicgrayslide({ isWaterMark, post, change, isPreview 
               color={"black"}
               isPNG={isPNG}
               icon={LiaBirthdayCakeSolid}
-              text={common.DateDisplayCustom(post.birthdate ? post.birthdate.value || "" : "", "DD/MM/YYYY")}
+              text={post.birthdate ? post.birthdate.value ? common.DateDisplayCustom(post.birthdate.value, "DD/MM/YYYY") : null : null}
               show={post.birthdate ? post.birthdate.show : false}
             />
             <TextIconR color={"black"} isPNG={isPNG} icon={FaHome} text={post.address ? post.address.value || "" : ""} show={post.address ? post.address.show : false} />

@@ -56,7 +56,7 @@ export default function ITPost({ isWaterMark, post, change, isPreview = false, i
         {!isPreview ? (
           <div className="flex flex-col items-end gap-3">
             <InputIconR ico={ICON_BG} color={BLACK} icon={LiaBirthdayCakeSolid}
-              text={common.DateDisplayCustom(post.birthdate?.value || "", "DD/MM/YYYY")}
+              text={post.birthdate ? post.birthdate.value ? common.DateDisplayCustom(post.birthdate.value, "DD/MM/YYYY") : null : null}
               show={!!post.birthdate?.show} name="birthdate" change={change} />
             <InputIconR ico={ICON_BG} color={BLACK} icon={FaHome}
               text={post.address?.value || ""} show={!!post.address?.show} name="address" change={change} />
@@ -68,7 +68,7 @@ export default function ITPost({ isWaterMark, post, change, isPreview = false, i
         ) : !post.birthdate?.show && !post.address?.show && !post.phone?.show && !post.mail?.show ? null : (
           <div className="flex flex-col items-end gap-3">
             <TextIconR ico={ICON_BG} color={BLACK} isPNG={isPNG} icon={LiaBirthdayCakeSolid}
-              text={common.DateDisplayCustom(post.birthdate?.value || "", "DD/MM/YYYY")} show />
+              text={post.birthdate ? post.birthdate.value ? common.DateDisplayCustom(post.birthdate.value, "DD/MM/YYYY") : null : null} show />
             <TextIconR ico={ICON_BG} color={BLACK} isPNG={isPNG} icon={FaHome}
               text={post.address?.value || ""} show />
             <TextIconR ico={ICON_BG} color={BLACK} isPNG={isPNG} icon={MdOutlineLocalPhone}

@@ -61,7 +61,7 @@ export default function BlueModernPost({isWaterMark, post, change, isPreview = f
                             !isPreview
                             ?
                                 <div className="flex flex-col items-end gap-3">
-                                    <InputIconR color={"white"} icon={LiaBirthdayCakeSolid} text={common.DateDisplayCustom(post.birthdate ? post.birthdate.value ? post.birthdate.value : "" : "", "DD/MM/YYYY")} show={post.birthdate ? post.birthdate.show : false} name={"birthdate"} change={change}/>
+                                    <InputIconR color={"white"} icon={LiaBirthdayCakeSolid} text={post.birthdate ? post.birthdate.value ? common.DateDisplayCustom(post.birthdate.value, "DD/MM/YYYY") : null : null} show={post.birthdate ? post.birthdate.show : false} name={"birthdate"} change={change}/>
                                     <InputIconR color={"white"} icon={FaHome} text={post.address ? post.address.value ? post.address.value : "" : ""} show={post.address ? post.address.show : false} name={"address"} change={change}/>
                                     <InputIconR color={"white"} icon={MdOutlineLocalPhone} text={post.phone ? post.phone.value ? post.phone.value : "" : ""} show={post.phone ? post.phone.show : false} name={"phone"} change={change}/>
                                     <InputIconR color={"white"} icon={IoIosMail} text={post.mail ? post.mail.value ? post.mail.value : "" : ""} show={post.mail ? post.mail.show : false} name={"mail"} change={change}/>
@@ -72,7 +72,7 @@ export default function BlueModernPost({isWaterMark, post, change, isPreview = f
                                 null
                                 :
                                 <div className="flex flex-col items-end gap-3">
-                                    <TextIconR color={"white"} isPNG={isPNG} icon={LiaBirthdayCakeSolid} text={common.DateDisplayCustom(post.birthdate ? post.birthdate.value ? post.birthdate.value : "" : "", "DD/MM/YYYY")} show={post.birthdate ? post.birthdate.show : false}/>
+                                    <TextIconR color={"white"} isPNG={isPNG} icon={LiaBirthdayCakeSolid} text={post.birthdate ? post.birthdate.value ? common.DateDisplayCustom(post.birthdate.value, "DD/MM/YYYY") : null : null} show={post.birthdate ? post.birthdate.show : false}/>
                                     <TextIconR color={"white"} isPNG={isPNG} icon={FaHome} text={post.address ? post.address.value ? post.address.value : "" : ""} show={post.address ? post.address.show : false} name={"address"} change={change}/>
                                     <TextIconR color={"white"} isPNG={isPNG} icon={MdOutlineLocalPhone} text={post.phone ? post.phone.value ? post.phone.value : "" : ""} show={post.phone ? post.phone.show : false} name={"phone"} change={change}/>
                                     <TextIconR color={"white"} isPNG={isPNG} icon={IoIosMail} text={post.mail ? post.mail.value ? post.mail.value : "" : ""} show={post.mail ? post.mail.show : false} name={"mail"} change={change}/>

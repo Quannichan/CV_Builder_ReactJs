@@ -88,14 +88,14 @@ export default function MaxNavyResume({
                   <InputIconL color={"white"} icon={FaHome} text={post?.address?.value || ""} show={post?.address?.show} name={"address"} change={change}/>
                   <InputIconL color={"white"} icon={MdOutlineLocalPhone} text={post?.phone?.value || ""} show={post?.phone?.show} name={"phone"} change={change}/>
                   <InputIconL color={"white"} icon={IoIosMail} text={post?.mail?.value || ""} show={post?.mail?.show} name={"mail"} change={change}/>
-                  <InputIconL color={"white"} icon={LiaBirthdayCakeSolid} text={common.DateDisplayCustom(post?.birthdate?.value || "", "DD/MM/YYYY")} show={post?.birthdate?.show} name={"birthdate"} change={change}/>
+                  <InputIconL color={"white"} icon={LiaBirthdayCakeSolid} text={post.birthdate ? post.birthdate.value ? common.DateDisplayCustom(post.birthdate.value, "DD/MM/YYYY") : null : null} show={post?.birthdate?.show} name={"birthdate"} change={change}/>
                 </div>
               ) : (
                 <div className="flex flex-col gap-2 mb-6">
                   <TextIconL color={"white"} isPNG={isPNG} icon={FaHome} text={post?.address?.value || ""} show={post?.address?.show}/>
                   <TextIconL color={"white"} isPNG={isPNG} icon={MdOutlineLocalPhone} text={post?.phone?.value || ""} show={post?.phone?.show}/>
                   <TextIconL color={"white"} isPNG={isPNG} icon={IoIosMail} text={post?.mail?.value || ""} show={post?.mail?.show}/>
-                  <TextIconL color={"white"} isPNG={isPNG} icon={LiaBirthdayCakeSolid} text={common.DateDisplayCustom(post?.birthdate?.value || "", "DD/MM/YYYY")} show={post?.birthdate?.show}/>
+                  <TextIconL color={"white"} isPNG={isPNG} icon={LiaBirthdayCakeSolid} text={post.birthdate ? post.birthdate.value ? common.DateDisplayCustom(post.birthdate.value, "DD/MM/YYYY") : null : null} show={post?.birthdate?.show}/>
                 </div>
               )}
 
