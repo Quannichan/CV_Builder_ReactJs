@@ -271,7 +271,9 @@ import mapping from "./mapping";
     VAR_FILE_SIZE_LIM  = 31457280;
 
     // base
-    URL_BE_BASE_IMG    = import.meta.env.VITE_BASE_URL_IMG;
+    URL_BE_BASE_IMG    = "";
+    // old
+    // URL_BE_BASE_IMG    = import.meta.env.VITE_BASE_URL_IMG;
     URL_BE_BASE        = import.meta.env.VITE_BASE_URL;
 
     // auth
