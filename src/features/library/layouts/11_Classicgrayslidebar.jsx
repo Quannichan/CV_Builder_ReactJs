@@ -24,7 +24,6 @@ export default function Classicgrayslide({ isWaterMark, post, change, isPreview 
   const GRAPHITE_SIDEBAR = "#2E2E2E";
   const GRAPHITE_DIVIDER = "#D1D5DB";
   const TEXT_DARK = "#1F2937";
-  const TEXT_MUTED = "#6B7280";
 
   return (
     <div className="relative">
@@ -48,7 +47,7 @@ export default function Classicgrayslide({ isWaterMark, post, change, isPreview 
             <img
               crossOrigin="anonymous"
               alt="avatar"
-              src={`${common.URL_BE_BASE_IMG}${post ? post.ava : ""}`}
+              src={post.ava ? !post.ava.includes("http") ? `${common.URL_BE_BASE_IMG}${post.ava}` : post.ava : ""}
               className="w-50 h-50 object-cover rounded-full shadow-2xl"
             />
           ) : null}

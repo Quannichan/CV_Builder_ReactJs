@@ -9,7 +9,7 @@ export default function PostSampleComponent({isLogin, post, isAdmin}){
     return(
         <div className="bg-white rounded-lg shadow-[0px_15px_10px_#0000001A] h-full">
             <div>
-                <img src={common.URL_BE_BASE_IMG+post.img} className="rounded-t-lg w-100 aspect-square" />
+                <img src={!post.img.includes("http") ? `${common.URL_BE_BASE_IMG}${post.img}` : post.img } className="rounded-t-lg w-100 aspect-square" />
             </div>
             <div className="flex flex-col items-start gap-3 px-5 pt-6 pb-5">
                 <h1 className="text-lg font-semibold">{post.name}</h1>

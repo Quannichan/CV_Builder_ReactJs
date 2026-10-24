@@ -24,7 +24,7 @@ function User({user}){
 
     return(
         <div onClick={()=>nav(`/user?id=${user.id}`)} className="cursor-pointer w-fit p-2 rounded-xl">
-            <img className="aspect-square sm:aspect-square md:aspect-auto lg:aspect-auto xl:aspect-auto w-65 sm:w-60 md:w-70 lg:w-70 xl:w-65 sm:h-45 md:h-50 lg:h-50 xl:h-40 object-cover rounded-lg" src={common.URL_BE_BASE_IMG + user.ava}/>
+            <img className="aspect-square sm:aspect-square md:aspect-auto lg:aspect-auto xl:aspect-auto w-65 sm:w-60 md:w-70 lg:w-70 xl:w-65 sm:h-45 md:h-50 lg:h-50 xl:h-40 object-cover rounded-lg" src={!user.ava.includes("http") ? `${common.URL_BE_BASE_IMG}${user.ava}` : user.ava}/>
             <div className="pt-2 px-1">
                 <h3 className="text-sm sm:text-md md:text-lg lg:text-md xl:text-md font-semibold text-wrap min-w-20 w-full max-w-50  truncate line-clamp-2 pb-1 leading-6">{user.displayName}</h3>
                 <p className="text-sm sm:text-sm md:text-md lg:text-md xl:text-sm truncate min-w-20 w-full max-w-50 text-wrap line-clamp-2 text-[#00000098]">{user.address}, {user.wardData.name}, {user.cityData.name}</p>

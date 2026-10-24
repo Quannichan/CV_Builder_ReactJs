@@ -135,7 +135,11 @@ import mapping from "./mapping";
             this.UMAIL = localStorage.getItem("%UM%") ? localStorage.getItem("%UM%") : null;
         }
         if(u.userdata.ava){
-            localStorage.setItem("%UAVA%",this.URL_BE_BASE_IMG + u.userdata.ava);
+            if(u.userdata.ava.includes("http")){
+                localStorage.setItem("%UAVA%",u.userdata.ava);
+            }else{
+                localStorage.setItem("%UAVA%",this.URL_BE_BASE_IMG + u.userdata.ava);
+            }
             this.UIMG = localStorage.getItem("%UAVA%") ? localStorage.getItem("%UAVA%") : null;
         }
         if(u.userdata.accountType){
@@ -270,10 +274,7 @@ import mapping from "./mapping";
 
     VAR_FILE_SIZE_LIM  = 31457280;
 
-    // base
-    URL_BE_BASE_IMG    = "";
-    // old
-    // URL_BE_BASE_IMG    = import.meta.env.VITE_BASE_URL_IMG;
+    URL_BE_BASE_IMG    = import.meta.env.VITE_BASE_URL_IMG;
     URL_BE_BASE        = import.meta.env.VITE_BASE_URL;
 
     // auth

@@ -8,7 +8,6 @@ import { FaSquareGithub } from "react-icons/fa6";
 import { IoIosMail } from "react-icons/io";
 import { MdOutlineLocalPhone } from "react-icons/md";
 
-import SplitLine from "../../../components/SplitLine";
 import TextIconL from "../../post_workspace/components/TextIcon_l";
 import InputIconL from "../../post_workspace/components/InputIcon_l";
 import AddNewBtn from "../../post_workspace/components/AddNewBtn";
@@ -96,7 +95,7 @@ export default function StudentPastelResume({
                 {post?.ava ? (
                   <img
                     crossOrigin="anonymous"
-                    src={`${common.URL_BE_BASE_IMG}${post.ava}`}
+                    src={post.ava ? !post.ava.includes("http") ? `${common.URL_BE_BASE_IMG}${post.ava}` : post.ava : ""}
                     alt="avatar"
                     className="rounded-full object-cover"
                     style={{

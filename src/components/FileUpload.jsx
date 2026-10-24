@@ -22,7 +22,7 @@ function FileUpload({title, desc, isMuti = false, max, id, setFiles, value = nul
 
     useEffect(()=>{
         if(value){
-            setpreImgs(value ? value.map(d=>d.new ? d.data : common.URL_BE_BASE_IMG + d) : []);
+            setpreImgs(value ? value.map(d=>d.new ? d.data : !d.includes("http") ? common.URL_BE_BASE_IMG + d : d) : []);
         }
     }, [value]);
 

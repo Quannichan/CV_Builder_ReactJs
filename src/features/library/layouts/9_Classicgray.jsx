@@ -42,7 +42,7 @@ export default function ITPost({ isWaterMark, post, change, isPreview = false, i
             <img
               crossOrigin="anonymous"
               alt="avatar"
-              src={`${common.URL_BE_BASE_IMG}${post ? post.ava : ""}`}
+              src={post.ava ? !post.ava.includes("http") ? `${common.URL_BE_BASE_IMG}${post.ava}` : post.ava : ""}
               className="w-50 h-50 object-cover rounded-full shadow-2xl"
             />
           ) : null}

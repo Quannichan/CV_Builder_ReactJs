@@ -44,7 +44,7 @@ export default function BussinessPost({isWaterMark, post, change, isPreview = fa
                             {
                                 post.ava
                                 ?
-                                    <img crossOrigin="anonymous" alt="avatar" src={`${common.URL_BE_BASE_IMG}${post ? post.ava : ""}`} className="w-70 h-70 object-center object-cover aspect-square rounded-full shadow-2xl"/>
+                                    <img crossOrigin="anonymous" alt="avatar" src={post.ava ? !post.ava.includes("http") ? `${common.URL_BE_BASE_IMG}${post.ava}` : post.ava : ""} className="w-70 h-70 object-center object-cover aspect-square rounded-full shadow-2xl"/>
                                 :
                                 <></>
                             }

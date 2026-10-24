@@ -752,7 +752,7 @@ function PostWorkspace(){
                                                                     return (
                                                                         <div className="flex p-2 pr-3 items-center justify-between border-2 rounded-lg border-[#00000024]" key={i}>
                                                                             <div className="flex items-center">
-                                                                                <img className="w-10 h-10 rounded-full object-cover" src={common.URL_BE_BASE_IMG+d.ava}/>
+                                                                                <img className="w-10 h-10 rounded-full object-cover" src={d.ava ? !d.ava.includes("http") ? `${common.URL_BE_BASE_IMG}${d.ava}` : d.ava : ""}/>
                                                                                 <div className="px-3">
                                                                                     <h2 className="font-semibold text-sm">{d.name}</h2>
                                                                                     <p className="text-[12px]">{d.mail}</p>

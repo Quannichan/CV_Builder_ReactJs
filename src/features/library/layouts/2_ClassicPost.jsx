@@ -45,7 +45,7 @@ export default function ClassicPost({isWaterMark, post, change, isPreview = fals
                         {
                             post.ava
                             ?
-                                <img crossOrigin="anonymous" alt="avatar" src={`${common.URL_BE_BASE_IMG}${post ? post.ava : ""}`} className="w-50 h-50 object-center object-cover aspect-square rounded-full shadow-2xl"/>
+                                <img crossOrigin="anonymous" alt="avatar" src={post.ava ? !post.ava.includes("http") ? `${common.URL_BE_BASE_IMG}${post.ava}` : post.ava : ""} className="w-50 h-50 object-center object-cover aspect-square rounded-full shadow-2xl"/>
                             :
                             <></>
                         }

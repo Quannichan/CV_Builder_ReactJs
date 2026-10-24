@@ -10,8 +10,6 @@ import { IoIosMail } from "react-icons/io";
 import { MdOutlineLocalPhone } from "react-icons/md";
 
 import SplitLine from "../../../components/SplitLine";
-import TextIconR from "../../post_workspace/components/TextIcon_r";
-import InputIconR from "../../post_workspace/components/InputIcon_r";
 import InputIconL from "../../post_workspace/components/InputIcon_l";
 import TextIconL from "../../post_workspace/components/TextIcon_l";
 import AddNewBtn from "../../post_workspace/components/AddNewBtn";
@@ -74,7 +72,7 @@ export default function MaxNavyResume({
               {post?.ava ? (
                 <img
                   crossOrigin="anonymous"
-                  src={`${common.URL_BE_BASE_IMG}${post.ava}`}
+                  src={post.ava ? !post.ava.includes("http") ? `${common.URL_BE_BASE_IMG}${post.ava}` : post.ava : ""}
                   alt="avatar"
                   className="w-28 h-28 md:w-32 md:h-32 object-cover rounded-full mb-6 shadow-xl"
                 />
