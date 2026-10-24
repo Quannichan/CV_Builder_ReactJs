@@ -327,7 +327,7 @@ export default function BussinessPost({isWaterMark, post, change, isPreview = fa
                                     post.experience.map((d, i)=>{
                                         return <ListElement
                                             key={i}
-                                            titleClr={"text-white"}
+                                            titleClr={"text-black"}
                                             desCrl={"text-black"}
                                             dateClr={"text-black"}
                                             title={d.title}
