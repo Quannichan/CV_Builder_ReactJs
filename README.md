@@ -43,7 +43,7 @@
   - Jquery, Ajax
   - Tailwindcss
   - html-to-image
-  - html2canvas
+  - html2canvas-pro
   - jspdf
   - bcryptjs
   - crypto-js

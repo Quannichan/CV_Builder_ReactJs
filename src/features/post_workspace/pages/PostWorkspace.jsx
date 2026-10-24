@@ -7,7 +7,7 @@ import { useNavigate } from "react-router";
 import { Helmet } from "react-helmet";
 import AccNewPost from "../services/account";
 import jsPDF from "jspdf";
-import html2canvas from "html2canvas";
+import html2canvas from "html2canvas-pro";
 import { IoMdSave } from "react-icons/io";
 import { FaShare } from "react-icons/fa";
 import { FaFilePdf, FaFileImage  } from "react-icons/fa6";
